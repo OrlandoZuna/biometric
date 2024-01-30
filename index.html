@@ -7,13 +7,13 @@ hola
 //super admin rule 14
 //normal user 0
 include "zklibrary.php";
-echo 'Library Loaded</br>';
-  $zk = new ZKLibrary("10.10.165.24", 4370, 'UDP');
-  echo 'Requesting for connection</br>';
+echo "Library Loaded</br>";
+  $zk = new ZKLibrary("10.10.165.24", 4370);
+  echo "Requesting for connection</br>";
   $zk->connect();
   echo "Connected</br>";
   $zk->disableDevice();
-  echo 'disabling device</br>';
+  echo "disabling device</br>";
   $users = $zk->getUser();
   
   
