@@ -8,16 +8,16 @@ hola
 //normal user 0
 include "zklibrary.php";
 echo 'Library Loaded</br>';
-$zk = new ZKLibrary('10.10.165.24', 4370, 'UDP');
-echo 'Requesting for connection</br>';
-$zk->connect();
-echo 'Connected</br>';
-$zk->disableDevice();
-echo 'disabling device</br>';
-$users = $zk->getUser();
-
-
-$attendace = $zk->getAttendance();
+  $zk = new ZKLibrary("10.10.165.24", 4370, 'UDP');
+  echo 'Requesting for connection</br>';
+  $zk->connect();
+  echo "Connected</br>";
+  $zk->disableDevice();
+  echo 'disabling device</br>';
+  $users = $zk->getUser();
+  
+  
+  $attendace = $zk->getAttendance();
 ?>
 <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
 <thead>
