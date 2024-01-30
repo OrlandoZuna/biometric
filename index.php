@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<?php echo "Hello World" ?>
+<body>
+    <?php echo "Hello World" ?>
 <?php
 //The socket functions described here are part of an extension to PHP which must be enabled at compile time by giving the --enable-sockets option to configure.
 //Add extension=php_sockets.dll in php.ini and extension=sockets
@@ -5,7 +15,8 @@
 //super admin rule 14
 //normal user 0
 include "zklibrary.php";
-echo 'Library Loaded</br>';
+echo "Library Loaded</br>";
+echo 'Today’s date is <b>' . date('Y/m/d') . '</b> and it’s a <b>'.date('l').'</b> today!';
 $zk = new ZKLibrary('192.168.0.103', 4370, 'TCP');
 echo 'Requesting for connection</br>';
 $zk->connect();
@@ -26,6 +37,7 @@ $attendace = $zk->getAttendance();
     <td>Name</td>
     <td>Role</td>
     <td>Password</td>
+    
   </tr>
 </thead>
 
@@ -36,6 +48,7 @@ foreach($users as $key=>$user)
 {
   $no++;
 ?>
+
 
   <tr>
     <td align="right"><?php echo $no;?></td>
@@ -107,3 +120,7 @@ $zk->enableDevice();
 $zk->disconnect();
 
 ?>
+    
+</body>
+</html>
+
